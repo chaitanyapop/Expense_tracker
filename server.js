@@ -22,7 +22,7 @@ app.use('/expense/',expense_router)
 
 mongoose.connect(process.env.MONGO_DB).then(
    
-        app.listen(process.env.PORT,()=>{
+        app.listen(process.env.PORT || 40000,()=>{
             console.log("backend is connected to port "+process.env.PORT)
         })
     
